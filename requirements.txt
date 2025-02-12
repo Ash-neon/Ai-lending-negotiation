@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+transformers
+pandas
+scikit-learn
+joblib
+spacy
+openai
+streamlit
+pytest
+python-dotenv

@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    depends_on:
+      - db
+
+  dashboard:
+    image: python:3.9
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: ["streamlit", "run", "src/dashboard.py"]
+    ports:
+      - "8501:8501"
+    depends_on:
+      - api
+
+  db:
+    image: postgres:13
+    restart: always
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: secret
+      POSTGRES_DB: ai_lending
+    ports:
+      - "5432:5432"
