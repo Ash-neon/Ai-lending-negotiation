@@ -1,11 +1,18 @@
+# Web framework
 fastapi
 uvicorn
+
+# Machine Learning & AI
 transformers
-pandas
 scikit-learn
-joblib
-spacy
-openai
-streamlit
-pytest
+
+# Data Processing
+pandas
+numpy
+
+# Compliance & Security
 python-dotenv
+
+# API & Testing
+requests
+pytest
