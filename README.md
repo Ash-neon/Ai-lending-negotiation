@@ -35,7 +35,6 @@ pip install -r requirements.txt
 Create a `.env` file:
 ```ini
 OPENAI_API_KEY="your-openai-api-key"
-DATABASE_URL="sqlite:///./database.db"
 ```
 
 ### **3. Run Automated Tests**
